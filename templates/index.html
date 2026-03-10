@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Phishing Email Detector</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>🔐 AI Phishing Email Detector</h1>
+
+<form action="/predict" method="post">
+
+<textarea name="email" placeholder="Paste email content here"></textarea>
+
+<br><br>
+
+<button type="submit">Scan Email</button>
+
+</form>
+
+{% if prediction %}
+
+<div class="result">
+
+<h2>{{ prediction }}</h2>
+
+<p><b>Confidence:</b> {{ confidence }}%</p>
+
+<p><b>Phishing Risk Score:</b> {{ risk }}/100</p>
+
+<p><b>Threat Level:</b> {{ threat }}</p>
+
+{% if urls %}
+<p><b>URLs found in email:</b></p>
+<ul>
+{% for url in urls %}
+<li>{{ url }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if keywords %}
+<p><b>Suspicious Keywords:</b></p>
+<ul>
+{% for k in keywords %}
+<li>{{ k }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+</div>
+
+{% endif %}
+
+</body>
+</html>
