@@ -42,27 +42,27 @@ The platform allows users to:
 # 🖼️ Screenshots
 
 ## 🔐 Login Page
-<img width="100%" alt="Login Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 155821.png">
+<img width="100%" alt="Login Page" src="screenshots/login.png">
 
 ---
 
 ## 🏠 Home Page
-<img width="100%" alt="Home Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 155905.png">
+<img width="100%" alt="Home Page" src="screenshots/home.png">
 
 ---
 
 ## ⚠️ Prediction Result
-<img width="100%" alt="Prediction Result" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160037.png">
+<img width="100%" alt="Prediction Result" src="screenshots/result.png">
 
 ---
 
 ## 📊 Dashboard
-<img width="100%" alt="Dashboard" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160204.png">
+<img width="100%" alt="Dashboard" src="screenshots/dashboard.png">
 
 ---
 
 ## 🕘 History Page
-<img width="100%" alt="History Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160127.png">
+<img width="100%" alt="History Page" src="screenshots/history.png">
 
 ---
 
