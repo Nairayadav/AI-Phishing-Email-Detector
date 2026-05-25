@@ -1,109 +1,231 @@
-# 🔐 AI Phishing Email Detector
+# 🛡️ AI Phishing Email Detector
 
-An **AI-powered phishing email detection system** that analyzes email text and predicts whether an email is **Safe** or **Phishing** using **Machine Learning and Natural Language Processing (NLP)**.
-
-This project includes a **Flask web interface** where users can paste an email message and instantly detect phishing attempts.
+> An AI-powered cybersecurity web application that detects phishing emails using Machine Learning, Flask, and Scikit-learn.
 
 ---
 
-## 🚀 Features
+## 🌐 Live Demo
 
-* 🤖 AI-based phishing email classification
-* 📊 Confidence score prediction
-* ⚠️ Phishing risk score (0–100)
-* 🔥 Threat level classification (Low / Medium / High)
-* 🔎 Suspicious URL detection
-* 🧠 Phishing keyword detection
-* 🌐 Web interface using Flask
+🔗 **Live Website:**  
+https://ai-phishing-email-detector-4k29.onrender.com
 
 ---
 
-## 🛠️ Technologies Used
+## 📌 Project Overview
 
-* Python
-* Flask
-* Scikit-learn
-* TF-IDF Vectorization
-* Logistic Regression
-* HTML / CSS
+AI Phishing Email Detector is a full-stack cybersecurity project designed to identify phishing emails using Machine Learning techniques.
+
+The platform allows users to:
+- Register/Login securely
+- Scan suspicious emails
+- View prediction confidence scores
+- Track previous scans
+- Analyze phishing statistics on a dashboard
 
 ---
 
-## 📂 Project Structure
+# ✨ Features
 
-AI-Phishing-Email-Detector
+✅ AI-powered phishing email detection  
+✅ Machine Learning integration  
+✅ User authentication system  
+✅ Secure password hashing  
+✅ Prediction confidence score  
+✅ Dashboard analytics  
+✅ Prediction history tracking  
+✅ SQLite database integration  
+✅ Responsive modern UI  
+✅ Live deployment on Render  
+
+---
+
+# 🖼️ Screenshots
+
+## 🔐 Login Page
+<img width="100%" alt="Login Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 155821.png">
+
+---
+
+## 🏠 Home Page
+<img width="100%" alt="Home Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 155905.png">
+
+---
+
+## ⚠️ Prediction Result
+<img width="100%" alt="Prediction Result" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160037.png">
+
+---
+
+## 📊 Dashboard
+<img width="100%" alt="Dashboard" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160204.png">
+
+---
+
+## 🕘 History Page
+<img width="100%" alt="History Page" src="C:\Users\yadav\OneDrive\Pictures\Screenshots\Screenshot 2026-05-25 160127.png">
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- HTML5
+- CSS3
+
+## Backend
+- Python
+- Flask
+- Flask-SQLAlchemy
+- Flask-Login
+- Flask-Bcrypt
+
+## Machine Learning
+- Scikit-learn
+- TF-IDF Vectorizer
+- Multinomial Naive Bayes
+
+## Database
+- SQLite
+
+## Deployment
+- Render
+
+---
+
+# 📂 Project Structure
+
+```plaintext
+AI-Phishing-Email-Detector/
 │
-├── dataset
-│   └── Phishing_Email.csv
+├── app/
+│   ├── models/
+│   ├── routes/
+│   ├── static/
+│   ├── templates/
+│   └── __init__.py
 │
-├── static
-│   └── style.css
+├── ml_model/
+│   ├── model.pkl
+│   └── vectorizer.pkl
 │
-├── templates
-│   └── index.html
-│
-├── app.py
-├── train_model.py
+├── dataset/
+├── instance/
 ├── requirements.txt
+├── Procfile
+├── run.py
 └── README.md
+```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation & Setup
 
-Clone the repository:
+## 1️⃣ Clone Repository
 
+```bash
 git clone https://github.com/Nairayadav/AI-Phishing-Email-Detector.git
+```
 
-Move into the project folder:
-
+```bash
 cd AI-Phishing-Email-Detector
+```
 
-Install required libraries:
+---
 
+## 2️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Train the machine learning model:
+---
 
-python train_model.py
+## 3️⃣ Run Project
 
-Run the Flask application:
+```bash
+python run.py
+```
 
-python app.py
+Open in browser:
 
-Open the browser and go to:
-
+```plaintext
 http://127.0.0.1:5000
+```
 
 ---
 
-## 📧 Example Input
+# 🧠 Machine Learning Model
 
-Dear user,
+This project uses:
 
-Your bank account has been suspended.
-Click the link below to verify immediately.
+- **TF-IDF Vectorization**
+- **Multinomial Naive Bayes Algorithm**
 
-http://secure-bank-login-update.com
-
----
-
-## 📊 Example Output
-
-Phishing Email Detected
-Confidence: 92%
-Risk Score: 91 / 100
-Threat Level: HIGH
+to classify emails as:
+- Phishing
+- Safe
 
 ---
 
-## 🎯 Project Goal
+# 📊 Dashboard Analytics
 
-The goal of this project is to demonstrate how **Machine Learning and Cybersecurity techniques** can be used to identify phishing emails and improve email security.
+The dashboard provides:
+
+📌 Total scans  
+📌 Phishing email count  
+📌 Safe email count  
+📌 Recent scan history  
 
 ---
 
-## 👩‍💻 Author
+# 🔐 Authentication Features
 
-**Naira Yadav**
-B.Tech CSE (Cyber Security)
+- User Registration
+- User Login
+- Password Hashing
+- Session Management
+- Protected Routes
+
+---
+
+# 🚀 Deployment
+
+Deployed live using **Render**.
+
+🔗 https://ai-phishing-email-detector-4k29.onrender.com
+
+---
+
+# 👩‍💻 Author
+
+## Naira Yadav
+
+🔗 GitHub:  
+https://github.com/Nairayadav
+
+🔗 LinkedIn:  
+https://www.linkedin.com/in/naira-yadav-0141802a8
+
+---
+
+# 🌟 Future Improvements
+
+- Real-time URL scanning
+- Attachment malware detection
+- JWT Authentication
+- Dashboard charts
+- Dark mode
+- REST API integration
+- Deep Learning model
+
+---
+
+# ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
+
+# 📜 License
+
+This project is developed for educational and cybersecurity learning purposes.
