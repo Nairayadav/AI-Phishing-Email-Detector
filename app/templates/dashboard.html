@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Shield
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/history">History</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/logout">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard-container">
+
+        <h1 class="dashboard-title">
+            Cybersecurity Dashboard
+        </h1>
+
+
+        <!-- STATS -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+
+                <h2>{{ total_scans }}</h2>
+
+                <p>Total Scans</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2>{{ phishing_count }}</h2>
+
+                <p>Phishing Emails</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2>{{ safe_count }}</h2>
+
+                <p>Safe Emails</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECENT SCANS -->
+
+        <div class="recent-scans">
+
+            <h2>Recent Scans</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Email</th>
+
+                    <th>Prediction</th>
+
+                    <th>Time</th>
+
+                </tr>
+
+                {% for item in recent_scans %}
+
+                <tr>
+
+                    <td>{{ item.email_text }}</td>
+
+                    <td>{{ item.prediction_result }}</td>
+
+                    <td>{{ item.timestamp }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

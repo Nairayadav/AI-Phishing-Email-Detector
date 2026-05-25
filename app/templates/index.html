@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Phishing Detector</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Shield
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/history">History</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/logout">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                AI Powered Phishing Email Detector
+            </h1>
+
+            <p>
+                Detect malicious emails instantly using Machine Learning
+                and Cybersecurity intelligence.
+            </p>
+
+
+            <!-- DETECTION CARD -->
+
+            <div class="card">
+
+                <form method="POST">
+
+                    <textarea
+                        name="email"
+                        placeholder="Paste suspicious email here..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Detect Email
+                    </button>
+
+                </form>
+
+
+                <!-- RESULT -->
+
+                {% if prediction %}
+
+                    <div class="result">
+
+           <h2>
+
+        Prediction:
+        <strong>{{ prediction }}</strong>
+
+    </h2>
+
+    <br>
+
+    <p>
+
+        Confidence Score:
+        <strong>{{ confidence }}%</strong>
+
+    </p>
+
+</div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

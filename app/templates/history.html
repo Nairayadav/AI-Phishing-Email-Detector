@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction History</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Shield
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/history">History</a>
+
+            <a href="/logout">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HISTORY SECTION -->
+
+    <div class="history-container">
+
+        <h1>Your Prediction History</h1>
+
+        {% if history %}
+
+            <table>
+
+                <tr>
+
+                    <th>Email Text</th>
+
+                    <th>Prediction</th>
+
+                    <th>Time</th>
+
+                </tr>
+
+                {% for item in history %}
+
+                <tr>
+
+                    <td>{{ item.email_text }}</td>
+
+                    <td>{{ item.prediction_result }}</td>
+
+                    <td>{{ item.timestamp }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        {% else %}
+
+            <h2>No prediction history found.</h2>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
